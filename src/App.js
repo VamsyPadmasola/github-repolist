@@ -71,7 +71,7 @@ function App() {
 		try {
 			const result = await fetch(`https://api.github.com/users/${userName}`, {
 				headers: {
-					'Authorization': 'token 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',
+					'Authorization': 'token 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',
 				}
 			})
 			const data = await result.json()
@@ -87,7 +87,7 @@ function App() {
 			const results = await fetch(`https://api.github.com/users/${userName}/repos?page=${pageNo}&
 			per_page=10&sort=updated`, {
 				headers: {
-					'Authorization': 'token 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',
+					'Authorization': 'token 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',
 				}
 			})
 			const data = await results.json()
