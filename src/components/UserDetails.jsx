@@ -1,4 +1,3 @@
-import ReactDom from "react-dom";
 import { MdLocationPin } from "react-icons/md"
 
 

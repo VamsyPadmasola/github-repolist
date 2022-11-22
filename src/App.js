@@ -2,7 +2,6 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 import { Loader } from './components/Loader';
 import { UserDetails } from './components/UserDetails';
-import axios from 'axios';
 import { RepoCard } from './components/RepoCard';
 import { NotFound } from './components/NotFound';
 import { BsSearch } from 'react-icons/bs'

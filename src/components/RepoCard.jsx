@@ -1,6 +1,3 @@
-import ReactDom from "react-dom";
-
-const topicCount = 3
 export const RepoCard = (props) => {
     const newTopics = props.topics
 
