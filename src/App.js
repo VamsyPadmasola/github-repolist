@@ -41,7 +41,6 @@ function App() {
 		const { message } = data
 		if (message) {
 			setItems([])
-			console.log(message)
 			setShowLoader(false)
 			return setNotFound(true)
 		}
@@ -72,7 +71,7 @@ function App() {
 		try {
 			const result = await fetch(`https://api.github.com/users/${userName}`, {
 				headers: {
-					'Authorization': 'token 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',
+					'Authorization': 'token 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',
 				}
 			})
 			const data = await result.json()
@@ -88,7 +87,7 @@ function App() {
 			const results = await fetch(`https://api.github.com/users/${userName}/repos?page=${pageNo}&
 			per_page=10&sort=updated`, {
 				headers: {
-					'Authorization': 'token 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',
+					'Authorization': 'token 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',
 				}
 			})
 			const data = await results.json()
@@ -156,6 +155,12 @@ function App() {
 
 					}
 					{
+						notFound &&
+						<>
+							<NotFound />
+						</>
+					}
+					{
 						(itemCount > 0) &&
 						<ReactPaginate
 							previousLabel={"<<"}
@@ -179,12 +184,6 @@ function App() {
 					}
 
 				</div>
-			}
-			{
-				notFound &&
-				<>
-					<NotFound />
-				</>
 			}
 			{
 				showLoader &&
